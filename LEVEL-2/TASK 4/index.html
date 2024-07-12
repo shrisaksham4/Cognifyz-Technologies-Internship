@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 2 Task 4</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .content{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button{
+            text-align: center;
+            height: 50px;
+            width: 400px;
+            font-size: large;
+            font-weight: bold;
+            border-radius: 1.2rem;
+            border: 1px solid black;
+        }
+        button:hover{
+            cursor: pointer;
+            scale: 1.2;
+            transition : 0.5s ease-in-out;
+            background-color: rgb(175, 66, 66);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <button id="colorButton">Change Background Color</button>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const button = document.getElementById("colorButton");
+    
+        button.addEventListener("click", function() {
+            // Generate a random color
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+    
+            // Change the background color of the body
+            document.body.style.backgroundColor = randomColor;
+        });
+    });
+    </script>
+    
+</body>
+</html>
